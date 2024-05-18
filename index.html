@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Talent Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Homepage -->
+        <div id="home">
+            <h1>Welcome to the Language Talent Quiz</h1>
+            <p>Discover which language family you should learn based on your understanding of different languages.</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+        
+        <!-- Quiz -->
+        <div id="quiz" class="hidden">
+            <form id="quiz-form">
+                <!-- Indo-European: Germanic (English, German, Dutch) -->
+                <div class="question-group" data-family="Germanic">
+                    <h2>Indo-European: Germanic (English, German, Dutch)</h2>
+                    <!-- Easy -->
+                    <div class="question">
+                        <p>English: "Hello! My name is John and I love reading books and playing with my cat."</p>
+                        <label><input type="radio" name="q1" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q1" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q1" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q1" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>German: "Guten Morgen! Ich heiße Anna und ich liebe es, Bücher zu lesen und mit meiner Katze zu spielen."</p>
+                        <label><input type="radio" name="q2" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q2" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q2" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q2" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Dutch: "Goedemorgen! Mijn naam is Anna en ik hou ervan om boeken te lezen en met mijn kat te spelen."</p>
+                        <label><input type="radio" name="q3" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q3" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q3" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q3" value="incorrect"> Technology</label>
+                    </div>
+                    <!-- Medium -->
+                    <div class="question">
+                        <p>English: "Next year, I plan to travel to Italy to explore historical cities and learn about the culture."</p>
+                        <label><input type="radio" name="q4" value="Travel"> Travel</label>
+                        <label><input type="radio" name="q4" value="incorrect"> Education</label>
+                        <label><input type="radio" name="q4" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q4" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>German: "Nächstes Jahr plane ich, nach Italien zu reisen, um historische Städte zu erkunden und die Kultur kennenzulernen."</p>
+                        <label><input type="radio" name="q5" value="Travel"> Travel</label>
+                        <label><input type="radio" name="q5" value="incorrect"> Education</label>
+                        <label><input type="radio" name="q5" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q5" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Dutch: "Volgend jaar ben ik van plan om naar Italië te reizen om historische steden te verkennen en meer te leren over de cultuur."</p>
+                        <label><input type="radio" name="q6" value="Travel"> Travel</label>
+                        <label><input type="radio" name="q6" value="incorrect"> Education</label>
+                        <label><input type="radio" name="q6" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q6" value="incorrect"> Technology</label>
+                    </div>
+                    <!-- Difficult -->
+                    <div class="question">
+                        <p>English: "The question of the meaning of life has preoccupied humanity for centuries. Various philosophical schools have proposed different answers."</p>
+                        <label><input type="radio" name="q7" value="Philosophy"> Philosophy</label>
+                        <label><input type="radio" name="q7" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q7" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q7" value="incorrect"> Travel</label>
+                    </div>
+                    <div class="question">
+                        <p>German: "Die Frage nach dem Sinn des Lebens beschäftigt die Menschheit seit Jahrhunderten. Verschiedene philosophische Schulen haben unterschiedliche Antworten vorgeschlagen."</p>
+                        <label><input type="radio" name="q8" value="Philosophy"> Philosophy</label>
+                        <label><input type="radio" name="q8" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q8" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q8" value="incorrect"> Travel</label>
+                    </div>
+                    <div class="question">
+                        <p>Dutch: "De vraag naar de zin van het leven houdt de mensheid al eeuwen bezig. Verschillende filosofische scholen hebben verschillende antwoorden voorgesteld."</p>
+                        <label><input type="radio" name="q9" value="Philosophy"> Philosophy</label>
+                        <label><input type="radio" name="q9" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q9" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q9" value="incorrect"> Travel</label>
+                    </div>
+                </div>
+                <!-- Indo-European: Romance (French, Spanish, Italian) -->
+                <div class="question-group" data-family="Romance">
+                    <h2>Indo-European: Romance (French, Spanish, Italian)</h2>
+                    <!-- Easy -->
+                    <div class="question">
+                        <p>French: "Bonjour! J'aime les pommes et les croissants. Je bois du café le matin."</p>
+                        <label><input type="radio" name="q10" value="Food"> Food</label>
+                        <label><input type="radio" name="q10" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q10" value="incorrect"> Literature</label>
+                        <label><input type="radio" name="q10" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Spanish: "Hola! Me gustan las manzanas y los croissants. Bebo café por la mañana."</p>
+                        <label><input type="radio" name="q11" value="Food"> Food</label>
+                        <label><input type="radio" name="q11" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q11" value="incorrect"> Literature</label>
+                        <label><input type="radio" name="q11" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Italian: "Ciao! Mi piacciono le mele e i croissant. Bevo caffè la mattina."</p>
+                        <label><input type="radio" name="q12" value="Food"> Food</label>
+                        <label><input type="radio" name="q12" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q12" value="incorrect"> Literature</label>
+                        <label><input type="radio" name="q12" value="incorrect"> Technology</label>
+                    </div>
+                    <!-- Medium -->
+                    <div class="question">
+                        <p>French: "L'université de Paris est une des plus anciennes et prestigieuses institutions académiques en Europe."</p>
+                        <label><input type="radio" name="q13" value="Education"> Education</label>
+                        <label><input type="radio" name="q13" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q13" value="incorrect"> Sports</label>
+                        <label><input type="radio" name="q13" value="incorrect"> Literature</label>
+                    </div>
+                    <div class="question">
+                        <p>Spanish: "La Universidad de París es una de las instituciones académicas más antiguas y prestigiosas de Europa."</p>
+                        <label><input type="radio" name="q14" value="Education"> Education</label>
+                        <label><input type="radio" name="q14" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q14" value="incorrect"> Sports</label>
+                        <label><input type="radio" name="q14" value="incorrect"> Literature</label>
+                    </div>
+                    <div class="question">
+                        <p>Italian: "L'Università di Parigi è una delle istituzioni accademiche più antiche e prestigiose d'Europa."</p>
+                        <label><input type="radio" name="q15" value="Education"> Education</label>
+                        <label><input type="radio" name="q15" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q15" value="incorrect"> Sports</label>
+                        <label><input type="radio" name="q15" value="incorrect"> Literature</label>
+                    </div>
+                    <!-- Difficult -->
+                    <div class="question">
+                        <p>French: "Les œuvres de Marcel Proust explorent les thèmes de la mémoire et du temps avec une profondeur psychologique remarquable."</p>
+                        <label><input type="radio" name="q16" value="Literature"> Literature</label>
+                        <label><input type="radio" name="q16" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q16" value="incorrect"> Technology</label>
+                        <label><input type="radio" name="q16" value="incorrect"> Philosophy</label>
+                    </div>
+                    <div class="question">
+                        <p>Spanish: "Las obras de Marcel Proust exploran los temas de la memoria y el tiempo con una profundidad psicológica notable."</p>
+                        <label><input type="radio" name="q17" value="Literature"> Literature</label>
+                        <label><input type="radio" name="q17" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q17" value="incorrect"> Technology</label>
+                        <label><input type="radio" name="q17" value="incorrect"> Philosophy</label>
+                    </div>
+                    <div class="question">
+                        <p>Italian: "Le opere di Marcel Proust esplorano i temi della memoria e del tempo con una notevole profondità psicologica."</p>
+                        <label><input type="radio" name="q18" value="Literature"> Literature</label>
+                        <label><input type="radio" name="q18" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q18" value="incorrect"> Technology</label>
+                        <label><input type="radio" name="q18" value="incorrect"> Philosophy</label>
+                    </div>
+                </div>
+                <!-- Sino-Tibetan: Chinese (Simplified), Tibetan -->
+                <div class="question-group" data-family="Sino-Tibetan">
+                    <h2>Sino-Tibetan: Chinese (Simplified), Tibetan</h2>
+                    <!-- Easy -->
+                    <div class="question">
+                        <p>Chinese (Pinyin): "Nǐ hǎo! Wǒ xiǎng mǎi yīgè píngguǒ hé yī píng shuǐ. Duōshǎo qián?"</p>
+                        <label><input type="radio" name="q19" value="Shopping"> Shopping</label>
+                        <label><input type="radio" name="q19" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q19" value="incorrect"> Education</label>
+                        <label><input type="radio" name="q19" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Tibetan: "Tashi delek! Nga la sog ta de wa yong mi yong."</p>
+                        <label><input type="radio" name="q20" value="Greetings"> Greetings</label>
+                        <label><input type="radio" name="q20" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q20" value="incorrect"> Literature</label>
+                        <label><input type="radio" name="q20" value="incorrect"> Technology</label>
+                    </div>
+                    <!-- Medium -->
+                    <div class="question">
+                        <p>Chinese: "我喜欢在周末画画和看书。有时候，我也去公园散步。"</p>
+                        <label><input type="radio" name="q21" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q21" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q21" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q21" value="incorrect"> Travel</label>
+                    </div>
+                    <div class="question">
+                        <p>Tibetan: "Nga yin nang tshe re ma yin la, re so pa re nang nang dro."</p>
+                        <label><input type="radio" name="q22" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q22" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q22" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q22" value="incorrect"> Travel</label>
+                    </div>
+                    <!-- Difficult -->
+                    <div class="question">
+                        <p>Chinese: "唐朝是中国历史上一个重要的时期，以其繁荣的文化和经济著称。许多著名的诗人和画家都出现在这个时代。"</p>
+                        <label><input type="radio" name="q23" value="History"> History</label>
+                        <label><input type="radio" name="q23" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q23" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q23" value="incorrect"> Travel</label>
+                    </div>
+                    <div class="question">
+                        <p>Tibetan: "Tong rgyal ba bod gyi dus deb re pa nyid yin la, skye tshogs kyi phun tshogs chad las la mtshon."</p>
+                        <label><input type="radio" name="q24" value="History"> History</label>
+                        <label><input type="radio" name="q24" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q24" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q24" value="incorrect"> Travel</label>
+                    </div>
+                </div>
+                <!-- Uralic: Finnish, Hungarian -->
+                <div class="question-group" data-family="Uralic">
+                    <h2>Uralic: Finnish, Hungarian</h2>
+                    <!-- Easy -->
+                    <div class="question">
+                        <p>Finnish: "Hei! Minun nimeni on Anna ja pidän kissoista ja kirjoista."</p>
+                        <label><input type="radio" name="q25" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q25" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q25" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q25" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Hungarian: "Szia! A nevem Anna, és szeretem a macskákat és a könyveket."</p>
+                        <label><input type="radio" name="q26" value="Hobbies"> Hobbies</label>
+                        <label><input type="radio" name="q26" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q26" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q26" value="incorrect"> Technology</label>
+                    </div>
+                    <!-- Medium -->
+                    <div class="question">
+                        <p>Finnish: "Ensi vuonna aion matkustaa Italiaan tutustumaan historiallisiiin kaupunkeihin ja kulttuuriin."</p>
+                        <label><input type="radio" name="q27" value="Travel"> Travel</label>
+                        <label><input type="radio" name="q27" value="incorrect"> Education</label>
+                        <label><input type="radio" name="q27" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q27" value="incorrect"> Technology</label>
+                    </div>
+                    <div class="question">
+                        <p>Hungarian: "Jövőre Olaszországba tervezek utazni, hogy történelmi városokat fedezzek fel és megismerjem a kultúrát."</p>
+                        <label><input type="radio" name="q28" value="Travel"> Travel</label>
+                        <label><input type="radio" name="q28" value="incorrect"> Education</label>
+                        <label><input type="radio" name="q28" value="incorrect"> Philosophy</label>
+                        <label><input type="radio" name="q28" value="incorrect"> Technology</label>
+                    </div>
+                    <!-- Difficult -->
+                    <div class="question">
+                        <p>Finnish: "Elämän tarkoituksen kysymys on askarruttanut ihmiskuntaa vuosisatojen ajan. Eri filosofiset koulukunnat ovat ehdottaneet erilaisia vastauksia."</p>
+                        <label><input type="radio" name="q29" value="Philosophy"> Philosophy</label>
+                        <label><input type="radio" name="q29" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q29" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q29" value="incorrect"> Travel</label>
+                    </div>
+                    <div class="question">
+                        <p>Hungarian: "Az élet értelmének kérdése évszázadok óta foglalkoztatja az emberiséget. Különböző filozófiai iskolák különféle válaszokat javasoltak."</p>
+                        <label><input type="radio" name="q30" value="Philosophy"> Philosophy</label>
+                        <label><input type="radio" name="q30" value="incorrect"> Economy</label>
+                        <label><input type="radio" name="q30" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q30" value="incorrect"> Travel</label>
+                    </div>
+                </div>
+                <!-- Japonic: Japanese -->
+                <div class="question-group" data-family="Japonic">
+                    <h2>Japonic: Japanese</h2>
+                    <!-- Easy -->
+                    <div class="question">
+                        <p>Romaji: "Konnichiwa! Watashi no namae wa Takashi desu. Yoroshiku onegaishimasu."</p>
+                        <label><input type="radio" name="q31" value="Greetings"> Greetings</label>
+                        <label><input type="radio" name="q31" value="incorrect"> Travel</label>
+                        <label><input type="radio" name="q31" value="incorrect"> Food</label>
+                        <label><input type="radio" name="q31" value="incorrect"> Education</label>
+                    </div>
+                    <!-- Medium -->
+                    <div class="question">
+                        <p>Japanese: "日本には多くの祭りがあります。例えば、夏には花火大会や盆踊りがあります。"</p>
+                        <label><input type="radio" name="q32" value="Festivals"> Festivals</label>
+                        <label><input type="radio" name="q32" value="incorrect"> Daily Life</label>
+                        <label><input type="radio" name="q32" value="incorrect"> Literature</label>
+                        <label><input type="radio" name="q32" value="incorrect"> Education</label>
+                    </div>
+                </div>
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Results -->
+        <div id="result" class="hidden">
+            <h2>Your Recommended Language Family</h2>
+            <p id="result-text"></p>
+            <button onclick="restartQuiz()">Retake Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
